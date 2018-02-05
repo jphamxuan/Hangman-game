@@ -38,19 +38,23 @@ document.onkeyup = function (event) {
 
       }
 
-      //when guess = 0
+      //when no guesses remain
       if (guesses == 0) {
             lost++;
             usedArray = []
             guesses = 10;
       }
 
-      
+      else {
+            //pushes the players incorrect guess to the usedArray and writes it to the HTML
+            usedArray.push(playerGuess);
+            $("#playerGuess").html(usedArray);
+            console.log(usedArray);
 
       }
-     //writes  values of won lost and guesses
-      document.getElementById('won').innerHTML = won;
-      document.getElementById('lost').innerHTML = lost;
-      document.getElementById('guesses').innerHTML = guesses;
+     //writes  values of won, lost and guesses
+      $("#won").html(won);
+      $("#lost").html(lost);
+      $("#guesses").html(guesses);
 
 }
