@@ -56,7 +56,7 @@ document.onkeyup = function (event) {
       }
      //writes  values of won, lost and guesses
       $("#won").html("Wins: "+ won);
-      $("#lost").html("Lost: " + lost);
+      $("#lost").html("Losses!: " + lost);
       $("#guesses").html("Guesses Left: " + guesses);
 
 }
