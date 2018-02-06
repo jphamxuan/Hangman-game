@@ -1,67 +1,62 @@
-
-//array of letters
+var won = 0;
+var lost = 0;
+var guesses = 10;
+var usedArray = [];
+var psychicLetter = psychicLetter;
 var letters = ["a", "b", "c", "d", "e","f","g","h","i", "k", 
 "l", "m","n", "o","p", "q", "r", "s", "t", "u", "v", "w",
 "x","y", "z"];
 
-var won = 0;
 
-var lost = 0;
-
-var guesses = 9;
-
-var usedArray = [];
-
-var psychicLetter= psychicLetter;
-
-//selects random letter
-var psychicLetter = letters[Math.floor(Math.random() * letters.length)];
+//generates Psychic Letter
+psychicLetter = letters[Math.floor(Math.random() * letters.length)];
 console.log(psychicLetter);
 
-
-//uses random number
-
-function stuff(){
-    psychicLetter = letters[math.floor(math.random() * letters.length)];
-    console.log(psychicLetter);
-}
-
-
-//player presses key
-
-document.onkeydown = function (event){
-    var playerGuess = event.key;
-
-//correct guess
-if (playerGuess == psychicLetter){
-    won++;
-    guesses= 10
-    usedArray = [];
+//uses Psychic letter
+function jsGuess() {
+      psychicLetter = letters[Math.floor(Math.random() * letters.length)];
+      console.log(psychicLetter);
 
 }
 
-//incorrect guess
-stuff();
+//players key input
+document.onkeyup = function (event) {
+      var playerGuess = event.key;
 
-if( playerGuess!== psychicLetter){
-    guesses--;
+    //right answer
+      if (playerGuess === psychicLetter) {
+            won++;
+            guesses = 10;
+            usedArray = [];
+            alert("You Won! You're a Psychic Harry!")
+
+      }
+
+      //wrong answer
+      jsGuess();
+      if (playerGuess !== psychicLetter) {
+            guesses--;
+
+      }
+
+      //when no guesses are left
+      if (guesses == 0) {
+            lost++;
+            usedArray = [];
+            guesses = 10;
+            alert("Sorry, You're not Psychic. Try again.")
+      }
+
+      else {
+            //pushes the players incorrect guess to the usedArray and writes it to the HTML
+            usedArray.push(playerGuess);
+            $("#playerGuess").html(usedArray);
+            console.log(usedArray);
+
+      }
+     //writes  values of won, lost and guesses
+      $("#won").html("Wins: "+ won);
+      $("#lost").html("Lost: " + lost);
+      $("#guesses").html("Guesses Left: " + guesses);
 
 }
-
-//when guesses = 0
-
-if(guesses ==0){
-    lost ++;
-    usedArray = [];
-    guesses = 10;
-}
-
-
-
-document.getElementById('won').innerHTML = won;
-document.getElementById('lost').innerHTML = lost;
-document.getElementById('guesses').innerHTML = attempts;
-
-}
-
-};
