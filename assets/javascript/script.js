@@ -8,7 +8,7 @@ var letters = ["a", "b", "c", "d", "e","f","g","h","i", "k",
 "x","y", "z"];
 
 
-//makes Psychic Letter
+//generates Psychic Letter
 psychicLetter = letters[Math.floor(Math.random() * letters.length)];
 console.log(psychicLetter);
 
@@ -28,6 +28,7 @@ document.onkeyup = function (event) {
             won++;
             guesses = 10;
             usedArray = [];
+            alert("You Won! You're a Psychic Harry!")
 
       }
 
@@ -38,11 +39,12 @@ document.onkeyup = function (event) {
 
       }
 
-      //when no guesses remain
+      //when no guesses are left
       if (guesses == 0) {
             lost++;
             usedArray = []
             guesses = 10;
+            alert("Sorry, You're not Psychic. Try again.")
       }
 
       else {
@@ -53,8 +55,8 @@ document.onkeyup = function (event) {
 
       }
      //writes  values of won, lost and guesses
-      $("#won").html(won);
-      $("#lost").html(lost);
-      $("#guesses").html(guesses);
+      $("#won").html("Wins: "+ won);
+      $("#lost").html("Lost: " + lost);
+      $("#guesses").html("Guesses Left: " + guesses);
 
 }

@@ -1,0 +1,51 @@
+
+/* body {
+    background-image: url("assets/images/psychic.png");
+    background-color:lightslategrey;
+    background-size: 1024px 768px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top; 
+ } */
+
+ #won, #lost, #guesses, #playerGuess{
+
+ }
+
+ h1, h2, h3{
+     
+     color: white;
+ }
+
+ .container{
+    width: 1024px;
+    height: 768px;
+    background-image: url("assets/images/psychic.png");
+    background-size: 1024px 768px;
+    position: center;
+    margin-left: 1000px
+ }
+
+ .center{
+     text-align: center;
+     padding-left: -21px;
+     padding-top: 22px;
+ }
+
+#psychic{
+    background-color:  rgba(44, 34, 34, 0.5);;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 60px;
+    color: white;
+
+    
+     
+ }
+
+ #scores{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+     
+ }

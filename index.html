@@ -7,11 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Mystical Psychic Guessing Game</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Nanum+Pen+Script" rel="stylesheet">
+	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 	
+
+
 <script
   src="http://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -23,7 +28,7 @@
 
 	<div class="container">
 		<div class="center">
-			<div class="wrapper">
+			<div id="psychic">
 
 				
                 <h1>Psychic Game</h1>
@@ -31,26 +36,28 @@
                 <h2>Are you a psychic? Guess the Letter!</h2>
                 
                 <h3>10 tries to find out!</h3>
-                
-                <h3>Won</h3>
-
-				<span id="won"></span>
-
-				<h3>Lost</h3>
-
+			</div>    
+			<br>
+			<div id="scores">
+				<br>
+				
+				
+				
+				
+				<br><span id="won"></span>
+				<br>	
 				<span id="lost"></span>
-
-				<p>Guesses Remaining...
-					<span id="guesses"></span>
+				<br>
+				<span id="guesses"></span>
 				</p>
 
 				<p>Letters Already Guessed</p>
-
+	</div>
 				<span id="playerGuess"></span>
-
+			
 
 				
-			</div>
+			
 		</div>
 		</container>
 
