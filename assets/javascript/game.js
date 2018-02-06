@@ -13,7 +13,7 @@ psychicLetter = letters[Math.floor(Math.random() * letters.length)];
 console.log(psychicLetter);
 
 //uses Psychic letter
-function jsGuess() {
+function targetLetter() {
       psychicLetter = letters[Math.floor(Math.random() * letters.length)];
       console.log(psychicLetter);
 
@@ -33,7 +33,7 @@ document.onkeyup = function (event) {
       }
 
       //wrong answer
-      jsGuess();
+      targetLetter();
       if (playerGuess !== psychicLetter) {
             guesses--;
 
